@@ -16,15 +16,9 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: nginx:1.25
+          image: nginxinc/nginx-unprivileged:1.25
           ports:
             - containerPort: 8080
-          command:
-            - /bin/sh
-            - -c
-            - |
-              sed -i 's/listen       80;/listen       8080;/' /etc/nginx/conf.d/default.conf
-              nginx -g 'daemon off;'
           readinessProbe:
             httpGet:
               path: /

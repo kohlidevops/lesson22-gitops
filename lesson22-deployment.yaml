@@ -5,7 +5,7 @@ metadata:
   labels:
     app: lesson22-app
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: lesson22-app

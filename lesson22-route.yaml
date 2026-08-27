@@ -1,0 +1,10 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: lesson22-route
+spec:
+  to:
+    kind: Service
+    name: lesson22-service
+  port:
+    targetPort: http
